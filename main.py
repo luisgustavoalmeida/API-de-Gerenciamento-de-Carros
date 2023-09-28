@@ -9,7 +9,6 @@ app = Flask(__name__)
 # Configuração para desativar a ordenação das chaves JSON
 app.config['JSON_SORT_KEYS'] = False
 
-
 # Definir uma rota para lidar com solicitações GET para /carros
 @app.route('/carros', methods=['GET'])
 def get_carros():
@@ -29,6 +28,7 @@ def get_carros():
             ),
             500
         )
+
 # Definir uma rota para lidar com solicitações GET para /carros/<int:id>
 @app.route('/carros/<int:id>', methods=['GET'])
 def get_carro_by_id(id):
@@ -64,7 +64,6 @@ def get_carro_by_id(id):
             ),
             500
         )
-
 
 # Definir uma rota para lidar com solicitações POST para /carros
 @app.route('/carros', methods=['POST'])
